@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700&display=swap');
+
 
 
 html {
@@ -15,7 +15,7 @@ body {
   background: #fff;
     background-image: linear-gradient(#f0f 0.5px,transparent 0),linear-gradient(90deg,#F0F 0.5px,transparent 0),linear-gradient(#0ff 0.3px,transparent 0),linear-gradient(90deg,#0ff 0.3px,transparent 0);
     background-size: 100px 100px,100px 100px,10px 10px,10px 10px;
-    background-position: -1px -1px,-1px -1px,-1px -1px,-1px -1px;
+    background-position: 50% 50%,50% 50%,50% 50%,50% 50%;
   line-height: 1.5;
   font-family: 'Roboto', serif;
   font-size: 18px;
