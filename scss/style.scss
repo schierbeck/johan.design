@@ -36,10 +36,11 @@ h1 {
 }
 
 .card {
-  width: 315px;
+  width: 90%;
+  max-width: 700px;
   margin: 0 auto;
   border-radius: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   position: relative;
   top: 50%;
   left: 50%;
@@ -66,13 +67,13 @@ h1 {
 
   &:before {
     left: -50px;
-    border-right: 0.5px solid lighten(lime, 25%);
+    border-right: 0.5px solid lighten(green, 20%);
     border-radius: 30px 0 0 30px;
   }
 
   &:after {
     right: -50px;
-    border-left: 0.5px solid lighten(lime, 25%);
+    border-left: 0.5px solid lighten(green, 20%);
     border-radius: 0 30px 30px 0;
   }
 }
@@ -99,13 +100,13 @@ h1 {
   &:before {
     top: 0;
     border-radius: 30px 30px 0 0;
-    border-bottom: 0.5px solid lighten(lime, 25%);
+    border-bottom: 0.5px solid lighten(green, 20%);
   }
 
   &:after {
     bottom: 0;
     border-radius: 0 0 30px 30px;
-    border-top: 0.5px solid lighten(lime, 25%);
+    border-top: 0.5px solid lighten(green, 20%);
   }
 }
 
