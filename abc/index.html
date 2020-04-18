@@ -1,0 +1,61 @@
+<html>
+<meta charset="utf-8">
+	<title>Alfabetet</title>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		<script src="speakClient.js"></script>
+		<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+	</head>
+	<body>
+		
+		<button>Spela</button>
+		
+		<!-- <div class="letter hide" data-letter="0">A</div> -->
+
+		<h2 class="points"></h2>
+
+		<div class="character"></div>
+
+		<div class="word"></div>
+
+		<div class="levels">
+			<h3>Svårighetsgrad</h3>
+			<div>
+					<input type="radio" id="easy" name="levels" checked>
+				  <label for="easy">
+				  	<div class="smiley">😃</div>
+				  <span>Enkel</span>
+				</label>
+			</div>
+			<div>
+					<input type="radio" id="medium" name="levels">
+					<label for="medium">
+						<div class="smiley">🤔</div>
+						<span>Medel</span>
+					</label>
+			</div>
+			<div>
+				<input type="radio" id="hard" name="levels">
+				<label for="hard">
+					<div class="smiley">😑</div>
+					<span>Svår</span>
+				</label>
+			</div>
+		</div>
+
+		<!-- <div class="star"></div> -->
+		
+
+		<div id="audio"></div>
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>	
+	  <script src="vars.js"></script>	
+	  <script src="shuffle.js"></script>	
+	  <script src="script.js"></script>	
+	</body>
+</html>
+
