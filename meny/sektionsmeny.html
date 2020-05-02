@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sjukhus</title>
+
+  <style>
+
+    html, body {
+      padding: 0;
+      margin: 0;
+      font-family: arian, sans-serif;
+    }
+
+    html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+
+}
+
+p {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  padding-left: 15px;
+  margin: 20px 0 0;
+  font-size: 26px;
+}
+
+    .section-nav {
+      width: 375px;
+      height: 100vh;
+      position: relative;
+      border-right: 1px solid black;
+      overflow: hidden;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      position: absolute;
+      top: 0;
+      display: none;
+
+      width: 375px;
+      position: absolute;
+
+      left: 0;
+      transform: translateX(0);
+      transition:all 0.3s;
+      opacity: 1;
+    }
+
+    ul.active {
+      display: block;
+    }
+
+    ul.active ul {
+      display: block;
+    }
+
+    ul li {
+      height; 60px;
+      line-height: 60px;
+      font-size: 20px;
+      font-family: arial, sans-serif;
+      border-bottom: 1px solid black;
+      cursor: pointer;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+    }
+
+    ul li a {
+      padding-left: 15px;
+      height: 100%;
+      display: block;
+      text-decoration: none;
+      background: #fff;
+    }
+
+    ul li.dropdown a {
+      width: calc(100% - 60px);
+    }
+
+    ul li:first-child {
+      border-top: 1px solid black;
+    }
+    ul:not(.active) {
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    ul[data-level="0"] {
+      margin-top: 120px;
+    }
+    ul[data-level="1"] {
+      left: 375px;
+    }
+    ul[data-level="2"] {
+      left: 375px;
+    }
+    ul[data-level="3"] {
+      left: 375px;
+    }
+
+    li.dropdown:after {
+      position: absolute;
+      right: 0;
+      content: " >";
+      display: inline;
+      height: 60px;
+      line-height: 60px;
+      width: 60px;
+      margin-top: -60px;
+      border-left: 1px solid black;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .prev {
+      font-size: 16px;
+      padding: 20px 15px;
+      width: 100%;
+      cursor: pointer;
+      position: relative;
+      background: lightgray;
+    }
+
+    .prev:before {
+      content: "<";
+      position: relative;
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .content {
+      position: absolute;
+      left: 375px;
+      top: 0;
+      padding: 50px;
+    }
+
+    .body-wrapper  {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hide {
+      visibility: hidden;
+    }
+
+  </style>
+
+</head>
+
+<body>
+<div class="body-wrapper">
+  <div class="section-nav">
+
+    <div class="prev hide"></div>
+
+    <h3>För patient</h3>
+
+    <ul class="active show" data-level="0" style="transform: translateX(0px);">
+      <li><a href="1.html">Valfrihet</a></li>
+      <li class="dropdown">
+        <a href="1.html">Kliniker & avdelningar</a>
+        <ul data-level="1">
+          <li class="dropdown">
+            <a href="1.html">Aktiv Fysioterapi Södra</a>
+            <ul data-level="2">
+              <li><a href="1.html">Före besöket</a></li>
+              <li><a href="1.html">Under besöket</a></li>
+              <li><a href="1.html">Efter besöket</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="1.html">Hospicekliniken</a>
+            <ul data-level="2">
+              <li><a href="1.html">Före besöket</a></li>
+              <li><a href="1.html">Under besöket</a></li>
+              <li><a href="1.html">Efter besöket</a></li>
+            </ul>
+          </li>
+          <li><a href="1.html">Intensivvårdsavdelning</a></li>
+          <li class="dropdown">
+            <a href="1.html">Kirurgi och anestesi</a>
+            <ul data-level="2">
+              <li class="dropdown">
+                <a href="1.html">Kirurgiska ingrepp</a>
+                <ul data-level="3">
+                  <li><a href="1.html">Före besöket</a></li>
+                  <li><a href="1.html">Under besöket</a></li>
+                  <li><a href="1.html">Efter besöket</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="1.html">Stomimottagningen</a>
+              </li>
+              <li class="dropdown">
+                <a href="1.html">Kirurgiska ingrepp</a>
+                <ul data-level="3">
+                  <li class="dropdown">
+                    <a href="1.html">Anestesi</a>
+                    <ul>
+                      <li><a href="1.html">Före besöket</a></li>
+                      <li><a href="1.html">Under besöket</a></li>
+                      <li><a href="1.html">Efter besöket</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="1.html">Medicin</a>
+            <ul data-level="2">
+              <li class="dropdown">
+                <a href="1.html">Diabetes- och endokrinologimottagning</a>
+                <ul data-level="3">
+                  <li><a href="1.html">Före besöket</a></li>
+                  <li><a href="1.html">Under besöket</a></li>
+                  <li><a href="1.html">Efter besöket</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="1.html">Endoskopienheten</a>
+                <ul data-level="3">
+                  <li><a href="1.html">Gastroskopi</a></li>
+                  <li><a href="1.html">Kapselendoskopi</a></li>
+                  <li><a href="1.html">Koloskopi inläggning på avdelning</a></li>
+                  <li><a href="1.html">Koloskopi med laxabon</a></li>
+                  <li><a href="1.html">Koloskopi med movprep</a></li>
+                  <li><a href="1.html">Koloskopi med phosphoral</a></li>
+                  <li><a href="1.html">Koloskopi med picoprep</a></li>
+                  <li><a href="1.html">Tryckmätning</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="1.html">Gastroenheten</a>
+                <ul data-level="3">
+                  <li><a href="1.html">Ulcerös colit</a></li>
+                  <li><a href="2.html">Chrons sjukdom</a></li>
+                  <li><a href="1.html">Mikriskopisk kolit</a></li>
+                  <li><a href="1.html">Leversjukdom</a></li>
+                  <li><a href="1.html">Celiaki</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="1.html">Hjärtmottagning</a>
+                <ul data-level="3">
+                  <li><a href="1.html">Före besöket</a></li>
+                  <li><a href="1.html">Under besöket</a></li>
+                  <li><a href="1.html">Efter besöket</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="1.html">Rötgen</a>
+            <ul data-level="2">
+              <li><a href="1.html">Före besöket</a></li>
+              <li><a href="1.html">Under besöket</a></li>
+              <li><a href="1.html">Efter besöket</a></li>
+            </ul>
+          </li>
+          <li><a href="1.html">Uppvakningsavdelning</a></li>
+        </ul>
+
+      </li>
+
+      <li class="dropdown">
+        <a href="1.html">Patientsäkerhet</a>
+        <ul data-level="1">
+          <li><a href="1.html">Före besöket</a></li>
+          <li><a href="1.html">Under besöket</a></li>
+          <li><a href="1.html">Efter besöket</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="1.html">Så söker du vård</a>
+        <ul data-level="1">
+          <li><a href="1.html">Före besöket</a></li>
+          <li><a href="1.html">Under besöket</a></li>
+          <li><a href="1.html">Efter besöket</a></li>
+        </ul>
+      </li>
+      <li><a href="1.html">Försäkringsmottagning</a></li>
+      <li><a href="1.html">Din journal</a></li>
+      <li><a href="1.html">SMS-påminnelse inför besök</a></li>
+      <li class="dropdown">
+        <a href="1.html">Hur vi arbetar med patientnöjdhet</a>
+        <ul data-level="1">
+          <li><a href="1.html">Före besöket</a></li>
+          <li><a href="1.html">Under besöket</a></li>
+          <li><a href="1.html">Efter besöket</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="content">
+    <h1>För patient</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet fermentum mi ultricies suscipit. Donec volutpat tempus viverra. Praesent blandit dui ut purus mollis egestas. Cras eget nunc pharetra, ullamcorper elit sed, tincidunt sapien. Nullam sed odio sed sem pellentesque sollicitudin in non lacus. Nulla non enim mauris. Aliquam congue ultricies ante nec congue. Nulla nec metus eu nisl finibus condimentum. Morbi eu lobortis orci.</p>
+  </div>
+
+</div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.5.0.slim.min.js"
+    integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs="
+    crossorigin="anonymous"></script>
+
+  <script src="sektionsmeny.js"></script>
+
+</body>
+</html>

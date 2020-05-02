@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sektionsmeny intro</title>
+
+  <style>
+
+    html, body {
+      padding: 0;
+      margin: 0;
+      font-family: arian, sans-serif;
+    }
+
+    html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+
+}
+
+p {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  padding-left: 15px;
+  margin: 20px 0 0;
+  font-size: 26px;
+}
+
+    .section-nav {
+      width: 375px;
+      height: 100vh;
+      position: relative;
+      border-right: 1px solid black;
+      overflow: hidden;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      position: absolute;
+      top: 0;
+      display: none;
+
+      width: 375px;
+      position: absolute;
+
+      left: 0;
+      transform: translateX(0);
+      transition:all 0.3s;
+      opacity: 1;
+    }
+
+    ul.active {
+      display: block;
+    }
+
+    ul.active ul {
+      display: block;
+    }
+
+    ul li {
+      height; 60px;
+      line-height: 60px;
+      font-size: 20px;
+      font-family: arial, sans-serif;
+      border-bottom: 1px solid black;
+      cursor: pointer;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+    }
+
+    ul li a {
+      padding-left: 15px;
+      height: 100%;
+      display: block;
+      text-decoration: none;
+      background: #fff;
+    }
+
+    ul li.dropdown a {
+      width: calc(100% - 60px);
+    }
+
+    ul li:first-child {
+      border-top: 1px solid black;
+    }
+    ul:not(.active) {
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    ul[data-level="0"] {
+      margin-top: 120px;
+    }
+    ul[data-level="1"] {
+      left: 375px;
+    }
+    ul[data-level="2"] {
+      left: 375px;
+    }
+    ul[data-level="3"] {
+      left: 375px;
+    }
+
+    li.dropdown:after {
+      position: absolute;
+      right: 0;
+      content: " >";
+      display: inline;
+      height: 60px;
+      line-height: 60px;
+      width: 60px;
+      margin-top: -60px;
+      border-left: 1px solid black;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .prev {
+      font-size: 16px;
+      padding: 20px 15px;
+      width: 100%;
+      cursor: pointer;
+      position: relative;
+      background: lightgray;
+    }
+
+    .prev:before {
+      content: "<";
+      position: relative;
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .content {
+      position: absolute;
+      left: 375px;
+      top: 0;
+      padding: 50px;
+    }
+
+    .body-wrapper  {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hide {
+      visibility: hidden;
+    }
+
+    button {
+      height: 50px;
+      width: 250px;
+      font-size: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <p style="color: red;"> VIKTIGT! Påbörja inte uppgiften innan Johan ber dig börja!</p>
+
+    <h1>Hej och tack för att du deltar!</h1>
+
+    <p>Uppgiften görs i syfte att se hur väl användaren kan navigera till rätt artikel med hjälp av menyn.</p>
+
+    <h2>Uppgift</h2>
+
+    <p>Med hjälp av menyn, försök att navigera till sidan om Chrons sjukdom. När sidan med rubrik Chroms sjukdom har laddats är uppgiften klar.</p>
+
+    <p>Prata gärna högt under hela uppgiften. Vad tänker du? Är du konfunderad över något? Är något otydligt eller kristallklart?</p>
+
+    <p>För att ha bättre förutsättningar att hitta sidan om Chrons sjukdom ger vi här en kort sammanfattning av sjukdomen som kan komma att hjälpa dig när du försöker hitta rätt.</p>
+
+    <h2>Chrons sjukdom</h2>
+
+    <p>Crohns sjukdom är en sjukdom som orsakar inflammation i mag-tarmkanalen, oftast i tunntarmen och första delen av tjocktarmen. Vanliga symtom är diarré, magknip efter maten och att gå ner i vikt. Sjukdomen går inte över, men med behandling kan du leva i stort sett som vanligt. Behandlingen består av olika typer av läkemedel.</p>
+
+    <a href="sektionsmeny.html"><button>Påbörja uppgiften!</button></a>
+  </div>
+
+</body>
+</html>
